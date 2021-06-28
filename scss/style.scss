@@ -1,0 +1,25 @@
+@import "config";
+
+.hero-mobile {
+    display: block;
+
+    @include mq(1024px) {
+        display: none;
+    }
+}
+.hero-desktop {
+    display: none;
+
+    @include mq(1024px) {
+        display: block;
+    }
+}
+
+#err-icon {
+    display: none;
+}
+
+.main-content {
+    background-image: $gradient-1;
+    min-height: 100vh;
+}
