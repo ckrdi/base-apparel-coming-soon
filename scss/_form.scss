@@ -1,0 +1,49 @@
+#form {
+    padding: 0 2rem;
+
+    .form-field {
+        position: relative;
+
+        input {
+            padding: 0.7rem 1rem;
+            border-radius: 2rem;
+            width: 100%;
+            border: 1px solid $desaturated-red;
+            outline-style: none;
+            background-color: transparent;
+            color: $desaturated-red;
+            font-family: "Josefin Sans", sans-serif;
+        }
+        input:focus {
+            border: 1px solid $soft-red;
+        }
+        label {
+            position: absolute;
+            top: 14px;
+            left: 1rem;
+            color: $desaturated-red;
+            font-size: 0.9rem;
+            display: none;
+        }
+        #err-icon {
+            position: absolute;
+            top: 7px;
+            right: 70px;
+        }
+        .btn {
+            border: none;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            padding: 9px 1.5rem;
+            border-radius: 2rem;
+            background-image: $gradient-2;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+    #notification {
+        padding: 0.5rem 1rem;
+        color: $desaturated-red;
+        font-size: 0.9rem;
+    }
+}

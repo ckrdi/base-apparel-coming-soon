@@ -1,16 +1,17 @@
 @import "config";
+@import "form";
 
 .hero-mobile {
     display: block;
 
-    @include mq(1024px) {
+    @include mq(376px) {
         display: none;
     }
 }
 .hero-desktop {
     display: none;
 
-    @include mq(1024px) {
+    @include mq(376px) {
         display: block;
     }
 }
@@ -19,7 +20,75 @@
     display: none;
 }
 
+@include mq(376px) {
+    .main-container {
+        display: flex;
+        overflow-x: hidden;
+    }
+}
+
 .main-content {
     background-image: $gradient-1;
     min-height: 100vh;
+
+    @include mq(376px) {
+        min-width: 375px;
+    }
+
+    @include mq(1280px) {
+        padding: 2.4rem 15rem 0 6rem;
+    }
+
+    .main-logo {
+        padding: 30px;
+        height: 80px;
+
+        @include mq(1280px) {
+            padding: 22px;
+        }
+    }
+
+    h1 {
+        padding-top: 4.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        font-size: 2.6rem;
+
+        @include mq(1280px) {
+            padding-top: 7rem;
+            padding-left: 30px;
+            align-items: flex-start;
+            letter-spacing: 18px;
+            font-size: 4rem;
+        }
+
+        .span-1 {
+            font-weight: 300;
+            color: $desaturated-red;
+        }
+
+        .span-2,
+        .span-3 {
+            font-weight: 400;
+            color: $dark-gray-red;
+        }
+    }
+
+    p {
+        font-size: 0.9rem;
+        padding: 2rem;
+        text-align: center;
+        color: $desaturated-red;
+        line-height: 1.4rem;
+
+        @include mq(1280px) {
+            font-size: 1rem;
+            text-align: left;
+            line-height: 1.8rem;
+        }
+    }
 }
