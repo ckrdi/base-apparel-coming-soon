@@ -37,6 +37,7 @@
 
     @include mq(1280px) {
         padding: 2.4rem 15rem 0 6rem;
+        background-image: $bg-pattern, $gradient-1;
     }
 
     .main-logo {
